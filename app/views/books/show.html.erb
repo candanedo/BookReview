@@ -1,11 +1,24 @@
-<%= link_to "Back", root_path %>
-<% if @book.cover_image.attached? %>
-  <%= image_tag @book.cover_image, width: '100px'%>
-<% end %>
-<h2><%= @book.title %></h2>
-<h4><%= @book.author %></h4>
-<h6><%= @book.category.name %></h6>
-<p><%= @book.description %></p>
+<div class="row">
+  <div class="col-md-4">
+    <% if @book.cover_image.attached? %>
+      <%= image_tag @book.cover_image, size: "275x400", class: 'book-show'%>
+    <% end %>
+  </div>
+  <div class="col-md-8">
+    <h2><%= @book.title %></h2>
+    <h4><%= @book.author %></h4>
+    <h6><%= @book.category.name %></h6>
+    <p><%= @book.description %></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    
+  </div>
+</div>
+
+<%= link_to "Back", root_path %> | 
 
 <% if user_signed_in? %>
   <% if @book.user_id == current_user.id %>

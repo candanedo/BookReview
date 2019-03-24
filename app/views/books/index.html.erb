@@ -5,12 +5,15 @@
 <% end %>
 
 <% if @books.length > 0 %>
-  <% @books.each do |book| %>
-    <% if book.cover_image.attached? %>
-      <%= link_to image_tag(book.cover_image), book_path(book) %>
+  <div class="row">
+    <% @books.each do |book| %>
+      <div class="col-md-3">
+        <% if book.cover_image.attached? %>
+          <%= link_to image_tag(book.cover_image, size: "250x400" ), book_path(book) %>
+        <% end %>
+      </div>
     <% end %>
-    <h2><%= link_to book.title, book_path(book) %></h2>
-  <% end %>
+  </div>
 <% else %>
   <h4>Ohh oh, no books for this category yet</h4>
 <% end %>

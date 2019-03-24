@@ -1,5 +1,13 @@
 <h1>Books</h1>
 
-<% @books.each do |book| %>
-  <h2><%= link_to book.title, book_path(book) %></h2>
+<% if @category %>
+  <h4>Category: <%= @category.name %></h4>
+<% end %>
+
+<% if @books.length > 0 %>
+  <% @books.each do |book| %>
+    <h2><%= link_to book.title, book_path(book) %></h2>
+  <% end %>
+<% else %>
+  <h4>Ohh oh, no books for this category yet</h4>
 <% end %>

@@ -1,7 +1,8 @@
 <%= link_to "Back", root_path %>
 
 <h2><%= @book.title %></h2>
-<h5><%= @book.author %></h5>
+<h4><%= @book.author %></h4>
+<h6><%= @book.category.name %></h6>
 <p><%= @book.description %></p>
 
 <% if user_signed_in? %>

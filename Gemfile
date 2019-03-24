@@ -29,6 +29,9 @@ gem 'devise', '~> 4.6', '>= 4.6.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# AWS S3 for image storage
+gem 'aws-sdk-s3', '~> 1.8.2'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

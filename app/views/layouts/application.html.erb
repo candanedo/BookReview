@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <%= render 'header' unless current_page?(new_user_registration_path) || current_page?(new_user_session_path) %>
+    <%= render 'shared/header' unless current_page?(new_user_registration_path) || current_page?(new_user_session_path) %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     

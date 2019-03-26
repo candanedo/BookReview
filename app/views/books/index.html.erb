@@ -9,7 +9,7 @@
     <% @books.each do |book| %>
       <div class="col-md-3">
         <% if book.cover_image.attached? %>
-          <%= link_to image_tag(book.cover_image, size: "250x400" ), book_path(book) %>
+          <%= link_to image_tag(book.cover_image), book_path(book), class: "thumbnail" %>
         <% end %>
       </div>
     <% end %>

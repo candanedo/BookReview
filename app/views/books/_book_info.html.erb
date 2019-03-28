@@ -1,0 +1,13 @@
+<h2><%= @book.title %></h2>
+<div class="review-rating" data-score="<%= @average_rating %>">
+  <label>Average Rating</label>
+</div>
+<span>Based on <%= @people_rated %> <%= @people_rated == 1 ? 'review' : 'reviews' %></span>
+<h4><%= @book.author %></h4>
+<h6><%= @book.category.name %></h6>
+<p><%= @book.description %></p>
+<% if @book.book_file.attached? %>
+  <h6>Link to the Book: </h6>
+  <%= link_to "Read Book", rails_blob_path(@book.book_file, disposition: 'preview') %> |
+  <%= link_to "Download Book", rails_blob_path(@book.book_file, disposition: 'attachment') %>
+<% end%>

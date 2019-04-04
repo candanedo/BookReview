@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Book < ApplicationRecord
   belongs_to :user
   belongs_to :category
@@ -6,5 +8,5 @@ class Book < ApplicationRecord
   has_many :reviews
 
   scope :by_category, ->(category_id) { where(category_id: category_id) }
-  scope :order_by_title, ->() { order('title') }
+  scope :order_by_title, -> { order('title') }
 end

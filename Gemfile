@@ -34,6 +34,11 @@ gem 'aws-sdk-s3', '~> 1.8.2'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
+# Async jobs
+gem 'redis'
+gem 'redis-rails'
+gem 'sidekiq'
+gem 'sidekiq-scheduler'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -30,6 +30,7 @@ gem 'devise', '~> 4.6', '>= 4.6.1'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'pagy'
 
 # AWS S3 for image storage
 gem 'aws-sdk-s3', '~> 1.8.2'

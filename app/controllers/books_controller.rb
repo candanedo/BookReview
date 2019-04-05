@@ -6,7 +6,7 @@ class BooksController < ApplicationController
   before_action :authenticate_user!, only: %i[new edit]
   def index
     if params[:category_id].blank?
-      @books = Book.all.order_by_title
+      @pagy, @books = pagy(Book.all.order_by_title, items: 12)
     else
       @books = Book.all.by_category(params[:category_id]).order_by_title
       @category = Category.find_by(id: params[:category_id])
